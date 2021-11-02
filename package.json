@@ -1,15 +1,16 @@
 {
   "name": "react-use-flash",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React hook for temporarily flashing state",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
   "author": {
     "name": "Luke Martin",
     "email": "me@luke.dev",
     "url": "https://luke.dev"
   },
+  "repository": "https://github.com/lukemartin/react-use-flash",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "license": "MIT",
   "scripts": {
     "build": "rimraf lib && yarn build:esm && yarn build:cjs",

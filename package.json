@@ -1,6 +1,6 @@
 {
   "name": "react-use-flash",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React hook for temporarily flashing state",
   "author": {
     "name": "Luke Martin",

@@ -21,11 +21,11 @@ yarn add react-use-flash
 import { useFlash } from 'react-use-flash';
 
 function App() {
-	const [message, flash] = useFlash('Copy', {
-		duration: 1000,
-	});
+  const [message, flash] = useFlash('Copy', {
+    duration: 1000,
+  });
 
-	return <button onClick={() => flash('Copied!')}>{message}</button>;
+  return <button onClick={() => flash('Copied!')}>{message}</button>;
 }
 ```
 
@@ -35,22 +35,22 @@ function App() {
 import { useFlash } from 'react-use-flash';
 
 function App() {
-	const [alert, flash] = useFlash(
-		{ type: 'info', message: 'Save profile' },
-		{
-			duration: 1000,
-		},
-	);
+  const [alert, flash] = useFlash(
+    { type: 'info', message: 'Save profile' },
+    {
+      duration: 1000,
+    },
+  );
 
-	return (
-		<button
-			onClick={() =>
-				flash({ type: 'error', message: 'Oops! Please try again' })
-			}
-		>
-			{alert.message}
-		</button>
-	);
+  return (
+    <button
+      onClick={() =>
+        flash({ type: 'error', message: 'Oops! Please try again' })
+      }
+    >
+      {alert.message}
+    </button>
+  );
 }
 ```
 
@@ -60,26 +60,26 @@ function App() {
 import { useFlash } from 'react-use-flash';
 
 type Alert = {
-	type: 'info' | 'error';
-	message: string;
+  type: 'info' | 'error';
+  message: string;
 };
 
 function App() {
-	const [alert, flash] = useFlash<Alert>(
-		{ type: 'error', message: 'Oops! Please try again' },
-		{
-			duration: 1000,
-		},
-	);
+  const [alert, flash] = useFlash<Alert>(
+    { type: 'error', message: 'Oops! Please try again' },
+    {
+      duration: 1000,
+    },
+  );
 
-	return (
-		<button
-			onClick={() =>
-				flash({ type: 'error', message: 'Oops! Please try again' })
-			}
-		>
-			{alert.message}
-		</button>
-	);
+  return (
+    <button
+      onClick={() =>
+        flash({ type: 'error', message: 'Oops! Please try again' })
+      }
+    >
+      {alert.message}
+    </button>
+  );
 }
 ```
